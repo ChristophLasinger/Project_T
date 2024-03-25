@@ -1,10 +1,12 @@
 <script setup>
-const project_name = 'Project T'
+  const project_name = 'Project T'
 </script>
 
 <template>
   <h1 class="headline">Welcome to {{ project_name }}</h1>
-
+  
+  <RouterLink to="/newGame">game</RouterLink>
+  <br />
   <button class="link">New Game</button>
   <button class="link">Load Save</button>
 </template>
