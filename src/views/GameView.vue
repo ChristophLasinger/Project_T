@@ -3,8 +3,8 @@
 <template>
   <div class="sideBar">
     <img src="../assets/test_char.png" height="175" id="characterImage" />
-    <h1>test</h1>
-    <h1>test</h1>
+    <p class="description">You are wearing a green suit, have no bitches and are infected by the cringe virus</p>
+    <p class="description">You are fine</p>
 
     <div class="stat">
       <p class="statLabel">Health</p>
@@ -38,9 +38,11 @@
     </div>
 
     <div id="buttons">
+      <button class="sideBarButton sideBarButtonImportant">Character</button>
+      <button class="sideBarButton sideBarButtonImportant">Traits</button>
       <button class="sideBarButton">Map</button>
       <button class="sideBarButton">Journal</button>
-      <button class="sideBarButton">Help</button>
+      <button class="sideBarButton">Options</button>
       <button class="sideBarButton">Save</button>
     </div>
   </div>
@@ -51,15 +53,27 @@
 </template>
 
 <style>
+body {
+  background-color: black;
+}
+
 .sideBar {
   float: left;
   height: 100%;
-  width: 25%;
+  width: 20%;
   border-right: 2px solid var(--color-text);
+  background-color: var(--color-background);
 }
 
 #characterImage {
   margin-bottom: 2em;
+}
+
+.description {
+  font-size: 1.2em;
+  text-align: center;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
 }
 
 .stat {
@@ -68,6 +82,7 @@
 
 .statLabel {
   font-size: 1.4em;
+  text-align: center;
 }
 
 .progressBar {
@@ -110,6 +125,14 @@
   background-color: transparent;
   color: var(--color-text);
   font-size: 1.3em;
+}
+
+.sideBarButtonImportant {
+  width: 100%;
+}
+
+.sideBarButton:hover {
+  background: rgba(110, 110, 110, 0.3)
 }
 
 #buttons {
